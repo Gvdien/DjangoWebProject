@@ -1,3 +1,18 @@
 <a href="/">
     <h1>Navigation Bar</h1>
 </a>
+
+<form method="get" action="">
+    {% csrf_token %}
+
+    <input type="text" name="q" placeholder="Search">
+    <input type="submit" value="Search">
+</form>
+
+
+{% if request.user.is_authenticated %}
+    <a href="{% url 'logoutUser' %}">Logout</a>
+{% else %}
+    <a href="{% url 'loginUser' %}">Login</a>
+{% endif %}
+
