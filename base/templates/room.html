@@ -10,10 +10,20 @@
 
         {% for message in room_messages %}
             <div>
-                <p>{{ message.user }} - {{ message.message }} : {{ message.created|timesince }}</p>
+                <p> <b>{{ message.user }}</b>- <small> {{ message.created|timesince }} ago </small></p>
+                <p>{{ message.message }}</p>
             </div>
         {% endfor %}
     </div>
+
+    {% if request.user.is_authenticated %}
+    <div class="comment-form">
+        <form method="post" action="">
+            {% csrf_token %}
+            <input type="text" name="body" placeholder="Write your messages here..">
+        </form>
+    </div>
+    {% endif %}
 
 
 {% endblock %}
