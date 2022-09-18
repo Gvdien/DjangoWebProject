@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
+import logging,sys
 
 # Create your views here.
 
@@ -67,16 +68,17 @@ def home(req):
 def room(req, key):
     room = Room.objects.get(id=key)
     room_messages = room.message_set.all().order_by('created')
-
+    participants = room.participants.all()
+    count = participants.count()
     if req.method == "POST":
         message = Message.objects.create(
-            user = req.user,
-            room = room,
-            message = req.POST.get('message')
+            user=req.user,
+            room=room,
+            body=req.POST.get('body')
         )
         return redirect('room', key=room.id)
 
-    context = {'room': room, 'room_messages': room_messages}
+    context = {'room': room, 'room_messages': room_messages, 'participants': participants, 'count': count}
     return render(req, 'room.html', context)
 
 @login_required(login_url='loginUser')

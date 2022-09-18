@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a674da3-29af-4dc6-a7c4-104bcebe3958" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/room.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -95,7 +96,13 @@
       <workItem from="1662966917939" duration="154000" />
       <workItem from="1663123131825" duration="6494000" />
       <workItem from="1663229250667" duration="156000" />
-      <workItem from="1663231941867" duration="2376000" />
+      <workItem from="1663231941867" duration="2851000" />
+      <workItem from="1663237278947" duration="440000" />
+      <workItem from="1663286655642" duration="104000" />
+      <workItem from="1663286770180" duration="1674000" />
+      <workItem from="1663430239432" duration="869000" />
+      <workItem from="1663473178474" duration="3616000" />
+      <workItem from="1663476828991" duration="2334000" />
     </task>
     <servers />
   </component>
@@ -112,5 +119,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/base/templates/room.html</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
